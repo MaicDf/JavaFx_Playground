@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Controller1Inicio.java&apos; to &apos;MenuInicial.fxml&apos;&#x0D;&#x0A;- Original project: &apos;LIFERPGtests&apos;&#x0D;&#x0A;- Destination element: &apos;MenuInicial.fxml&apos;&#x0D;&#x0A;- Original element: &apos;application.Controller1Inicio.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" element1="/src&lt;application{Controller1Inicio.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1732737331880" target="src/application/views/MenuInicial.fxml" units="1" version="1.0"/>
+</session>
