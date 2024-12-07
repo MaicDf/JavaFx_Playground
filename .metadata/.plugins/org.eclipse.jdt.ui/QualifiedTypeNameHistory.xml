@@ -10,4 +10,6 @@
     <fullyQualifiedTypeName name="javafx.fxml.FXMLLoader"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
+    <fullyQualifiedTypeName name="javafx.stage.Screen"/>
+    <fullyQualifiedTypeName name="javafx.scene.layout.GridPane"/>
 </qualifiedTypeNameHistroy>

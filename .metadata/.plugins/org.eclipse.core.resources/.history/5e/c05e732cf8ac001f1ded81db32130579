@@ -1,9 +1,0 @@
-package application;
-
-public class Controller1Inicio {
-
-	public Controller1Inicio() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

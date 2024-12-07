@@ -1,0 +1,65 @@
+/* Fondo del contenedor principal */
+.root-pane {
+    -fx-background-color: linear-gradient(to bottom, #e8f5e9, #a5d6a7); /* Gradiente de verde claro */
+    -fx-alignment: center; /* Alineación de los hijos en el centro */
+}
+
+/* Estilo del texto del logo */
+.logo-text {
+    -fx-font-family: "Arial";
+    -fx-font-size: 60.0px;
+    -fx-fill: #388e3c; /* Verde bosque */
+    -fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.3), 10.0, 0.5, 0.0, 3.0); /* Sombra sutil */
+}
+
+/* Estilo del botón */
+.start-buttons {
+	-fx-alignment: center;  
+	-fx-font-size: 18.0px;
+    -fx-background-color: #81c784; /* Verde menta */
+    -fx-text-fill: white;
+    -fx-padding: 10.0 20.0;
+    -fx-background-radius: 8.0; /* Bordes redondeados */
+    -fx-border-radius: 8.0;
+    -fx-border-color: #66bb6a;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.2), 5.0, 0.3, 0.0, 2.0);
+}
+
+/* Hover del botón */
+.start-button:hover {
+    -fx-background-color: #66bb6a; /* Verde más oscuro */
+}
+
+/* Estilo al hacer clic */
+.start-button:pressed {
+    -fx-background-color: #4caf50;
+}
+
+/* Animación para el logo y el botón (opcional) */
+/* @keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+// Aplicar animación 
+.logo-text {
+    -fx-opacity: 0;
+    -fx-translate-y: -50px;
+    animation: fade-in 2s ease-in-out forwards;
+}
+
+.start-button {
+    -fx-opacity: 0;
+    -fx-translate-y: 20px;
+    animation: fade-in 3s ease-in-out forwards;
+    animation-delay: 1s; // Aparece después del logo 
+    
+} 
+*/

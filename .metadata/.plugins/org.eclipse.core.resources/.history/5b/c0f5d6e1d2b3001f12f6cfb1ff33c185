@@ -1,0 +1,70 @@
+package application.views;
+
+import javafx.animation.FadeTransition;
+import javafx.animation.ScaleTransition;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.text.Text;
+import javafx.stage.Screen;
+import javafx.util.Duration;
+
+public class Controller1Inicio {
+	@FXML
+	private Label logoLabel;
+	@FXML
+	private GridPane grid1;
+	@FXML
+	private Button newGameButton,continueButton;
+	
+
+	public void initialize() {
+		
+//this is for making the grid pane fill all the parent, this way centering the content
+		AnchorPane.setLeftAnchor(grid1, 10.0);
+		AnchorPane.setRightAnchor(grid1, 10.0);
+		AnchorPane.setTopAnchor(grid1, 10.0); // Set right margin to make it fill the width
+        AnchorPane.setBottomAnchor(grid1, 10.0); // Optional: Set bottom margin
+
+        
+		newGameButton.setVisible(false);
+		continueButton.setVisible(false);
+		// Animación de aparición del logo
+		FadeTransition fadeIn = new FadeTransition(Duration.seconds(2), logoLabel);
+		fadeIn.setFromValue(0);
+		fadeIn.setToValue(1);
+
+		// Animación de escala (creciendo el logo)
+		ScaleTransition scaleUp = new ScaleTransition(Duration.seconds(2), logoLabel);
+		scaleUp.setFromX(0.5);
+		scaleUp.setFromY(0.5);
+		scaleUp.setToX(1.5);
+		scaleUp.setToY(1.5);
+
+		// Animación combinada
+		fadeIn.setOnFinished(e -> {
+			FadeTransition fadeOut = new FadeTransition(Duration.seconds(2), logoLabel);
+			fadeOut.setFromValue(1);
+			fadeOut.setToValue(0.75);
+			continueButton.setVisible(true);
+			fadeOut.setOnFinished(ev -> {
+				// Mostrar botón New Game
+				newGameButton.setVisible(true);
+			});
+
+			fadeOut.play();
+		});
+
+		// Ejecutar las animaciones
+		fadeIn.play();
+		scaleUp.play();
+	}
+
+	@FXML
+	private void startNewGame() {
+		System.out.println("Starting the game...");
+		// Aquí puedes cambiar a la escena del juego
+	}
+}
